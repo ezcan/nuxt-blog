@@ -1,12 +1,12 @@
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? { router: { base: '/nuxt/blog/' } }
-    : {}
+// const routerBase =
+//   process.env.DEPLOY_ENV === 'GH_PAGES'
+//     ? { router: { base: '/nuxt/blog/' } }
+//     : {}
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  ...routerBase,
+  // ...routerBase,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "EZCAN\'s note",
