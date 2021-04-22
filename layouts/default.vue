@@ -56,4 +56,23 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.bd-container {
+  max-width: 960px;
+  width: calc(100% - 3rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
