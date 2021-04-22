@@ -5,7 +5,7 @@
       <div class="nav__menu" :class="toggleClass">
         <ul class="nav__list">
           <li class="nav__item">
-            <nuxt-link to="/">漢字查詢器</nuxt-link>
+            <nuxt-link to="/chinese">漢字查詢器</nuxt-link>
           </li>
         </ul>
       </div>
@@ -74,7 +74,7 @@ export default {
   height: $header_height;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 

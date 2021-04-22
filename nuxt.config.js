@@ -18,6 +18,15 @@ export default {
         rel: 'stylesheet',
         href: 'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css',
       },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Poppins:wght@500;600&display=swap',
+      },
     ],
   },
 
