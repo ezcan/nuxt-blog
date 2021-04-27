@@ -1,12 +1,12 @@
 $header_height: 3rem;
 
 /* ===== Colors ===== */
-$first_color: #119DA4;
-$first_color_alt:#048654; 
+$first_color: #52A8D3;
+$first_color_alt:#3BD2E2; 
 $title_color: #040404;
-$text_color: #707070;
+$text_color: #FBFEFB;
 $text_color_light: #A6A6A6;
-$body_color: #E9F1F7;
+$body_color: #32292F;
 $container_color: #FFF;
 
 /* ===== Font and typography ===== */
@@ -33,4 +33,11 @@ $z_fixed: 100;
   $h3_font_size: 1.25rem;
   $normal_font_size: 1rem;
   $small_font_size: .875rem;
+}
+
+.color-primary {
+  color: $first_color;
+}
+.color-body {
+  color: $body_color;
 }

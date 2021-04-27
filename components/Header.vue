@@ -65,7 +65,7 @@ export default {
   background-color: $body_color;
 
   &.scroll-header {
-    box-shadow: 0 2px 4px rgba(black, 0.1);
+    box-shadow: 0 2px 8px rgba(white, 0.1);
   }
 }
 
@@ -85,7 +85,7 @@ export default {
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     background-color: $first_color;
-    color: $body_color;
+    color: $text_color;
   }
 }
 
@@ -116,7 +116,7 @@ export default {
     text-align: center;
     background-color: $body_color;
     transition: 0.5s;
-    box-shadow: 0 4px 4px rgba(black, 0.1);
+    box-shadow: 0 4px 4px rgba(#fff, 0.3);
     border-radius: 0 0 1rem 1rem;
     z-index: $z_fixed;
 
