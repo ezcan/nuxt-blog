@@ -5,6 +5,7 @@
       :value="name"
       type="text"
       class="input"
+      placeholder="Search..."
       @input="$emit('update', $event.target.value)"
     />
   </div>
@@ -35,6 +36,7 @@ export default {
   margin-top: 1rem;
   border-radius: 0.5rem;
   background-color: $container_color;
+  color: $first_color;
 }
 .input {
   border: none;

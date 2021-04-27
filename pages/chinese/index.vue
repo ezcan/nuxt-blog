@@ -12,10 +12,13 @@
           <ul>
             <li v-for="pos of result.position" :key="pos.prefix">
               {{ pos.prefix }}
-              頁
-              <span class="color-primany">{{ pos.page }} / </span>
-              {{ pos.maxPage }}
-              {{ pos.text }}
+              <i class="bx bx-columns"></i>
+              <span class="color-primany"> {{ pos.page | page }} </span>
+              <span class="color-primany"> {{ pos.row | row }} </span>
+              <span class="color-primany"> {{ pos.col | col }} </span>
+            </li>
+            <li v-if="result.position.length === 0">
+              Opps!遊戲中可能有沒收錄這個字
             </li>
           </ul>
         </div>
@@ -34,6 +37,17 @@ export default {
   name: 'Chinese',
   components: {
     SearchInput,
+  },
+  filters: {
+    page(val) {
+      return val && `第${val}頁`
+    },
+    row(val) {
+      return val && `第${val}列`
+    },
+    col(val) {
+      return val && `第${val}字`
+    },
   },
   data() {
     return {
@@ -56,24 +70,19 @@ export default {
   methods: {
     findCharPosition(char) {
       const pos = words.filter((content) => content.includes(char))
-      if (!pos.length) return [{ error: `似乎沒有收錄這個漢字` }]
-
       return pos.map((content) => {
         const ROW_NUMBER = 5
         const COL_NUMBER = 12
         const prefix = content[0]
-        const index = content.indexOf(char) + 1
+        const index = content.indexOf(char)
         const page = Math.floor(index / (ROW_NUMBER * COL_NUMBER)) + 1
-        const maxPage =
-          Math.floor(content.length / (ROW_NUMBER * COL_NUMBER)) + 1
         const row = (Math.floor(index / COL_NUMBER) % ROW_NUMBER) + 1
         const col = index % COL_NUMBER === 0 ? 12 : index % COL_NUMBER
-        const text = `第 ${row} 列第 ${col} 字`
         return {
           prefix,
           page,
-          maxPage,
-          text,
+          row,
+          col,
         }
       })
     },
@@ -103,11 +112,6 @@ export default {
   padding: 0.5rem;
   text-align: justify;
   background-color: $first_color;
-  color: $body_color;
   border-radius: 0.5rem;
-}
-
-.color-primany {
-  color: $first_color;
 }
 </style>
