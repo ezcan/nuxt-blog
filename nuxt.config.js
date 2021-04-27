@@ -14,6 +14,13 @@ export default {
         content: 'width=device-width, initial-scale=1, maximum-scale=1',
       },
       { hid: 'description', name: 'description', content: '' },
+      // Facebook Opengraph
+      { property: 'og:url', content: 'https://www.ezcan.dev' },
+      { property: 'og:title', content: "ezcan\'s note" },
+      { property: 'og:description', content: '' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: '/ogCover.JPG' },
+      { property: 'og:image:type', content: 'image/jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
