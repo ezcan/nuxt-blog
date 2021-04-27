@@ -77,12 +77,13 @@ export default {
         const index = content.indexOf(char)
         const page = Math.floor(index / (ROW_NUMBER * COL_NUMBER)) + 1
         const row = (Math.floor(index / COL_NUMBER) % ROW_NUMBER) + 1
-        const col = index % COL_NUMBER === 0 ? 12 : index % COL_NUMBER
+        const col = (index % COL_NUMBER) + 1
         return {
           prefix,
           page,
           row,
           col,
+          index,
         }
       })
     },
