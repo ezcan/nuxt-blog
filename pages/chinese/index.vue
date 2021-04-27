@@ -96,6 +96,7 @@ export default {
   padding: 0.5rem;
   grid-template-columns: max-content 1fr;
   background-color: $container_color;
+  color: $body_color;
   border-radius: 0.5rem;
 }
 .target-char {
