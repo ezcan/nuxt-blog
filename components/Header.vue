@@ -7,6 +7,9 @@
           <li class="nav__item">
             <nuxt-link to="/chinese">漢字查詢器</nuxt-link>
           </li>
+          <li class="nav__item">
+            <nuxt-link to="/about">關於</nuxt-link>
+          </li>
         </ul>
       </div>
       <button id="nav-toggle" class="nav__toggle" @click="clickHandler">

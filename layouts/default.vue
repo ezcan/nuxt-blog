@@ -68,6 +68,14 @@ img {
   gap: 1.5rem;
 }
 
+.section-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: $h2_font_size;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
