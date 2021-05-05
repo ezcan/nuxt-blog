@@ -1,14 +1,16 @@
 <template>
   <section class="section bd-container">
     <h2 class="section-title">ABOUT THIS NOTE.</h2>
-    <div class="about__exoect bd-grid">
+    <div
+      class="about__exoect grid gap-4 grid-cols-1 md:grid-cols-2 items-center"
+    >
       <p class="stress">
         作為一位普通的中職球迷與實況野球玩家，自然希望能結合自己喜歡的元素，紀錄下曾參與的台灣棒球歷史；然而，能力設定值代表個人對於選手某一時期的成績評價，敬請異議者提供佐證材料，俾利製作後續版本時參酌調整，感謝！
       </p>
       <img src="@/assets/images/about1.jpg" class="about-img" alt="" />
     </div>
     <h2 class="section-title">ABOUT THIS NOTE.</h2>
-    <div class="about__me bd-grid">
+    <div class="about__me grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
       <img src="@/assets/images/about2.jpg" alt="" class="about-img" />
       <div class="about__description">
         <p>
@@ -41,11 +43,6 @@ p {
     margin-bottom: 0;
   }
 }
-.about__exoect,
-.about__me {
-  align-items: center;
-  grid-template-columns: 100%;
-}
 
 .stress {
   position: relative;
@@ -71,12 +68,5 @@ p {
 .about-img {
   border-radius: 1rem;
   box-shadow: 4px 4px 8px rgba(#fff, 0.3);
-}
-
-@media screen and (min-width: 768px) {
-  .about__exoect,
-  .about__me {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 </style>

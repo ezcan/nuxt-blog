@@ -5,7 +5,7 @@
       <li
         v-for="result of searchResult"
         :key="result.target"
-        class="result__container bd-grid"
+        class="result__container grid"
       >
         <h3 class="target-char">{{ result.target }}</h3>
         <div class="result__box">
