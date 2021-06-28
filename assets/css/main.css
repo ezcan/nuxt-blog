@@ -1,5 +1,19 @@
 :root {
+  /* colors */
   --color-primary: #52A8D3;
+  --color-red: #FC6471;
+  --color-green: #90E39A;
+  --color-white: #FBFEFB;
+  --color-black: #32292F;
+  /* font family */
+  --body-font: 'Poppins', sans-serif , 'Noto Sans TC', sans-serif;
+  /* font size */
+  --biggest-font-size: 4rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
 }
 
 .page-enter-active,

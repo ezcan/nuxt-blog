@@ -28,7 +28,7 @@ html {
 
 body {
   margin: $header_height 0 0 0;
-  font-family: $body_font;
+  font-family: var(--body-font);
   font-size: $normal_font_size;
   background-color: $body_color;
   color: $text_color;
@@ -46,9 +46,6 @@ p,
 ul {
   margin: 0;
 }
-ul {
-  margin: 0;
-}
 a {
   text-decoration: none;
 }
@@ -63,15 +60,11 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.bd-grid {
-  display: grid;
-  gap: 1.5rem;
-}
 
 .section-title {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-size: $h2_font_size;
+  font-size: var(--h2-font-size);
   text-transform: uppercase;
   text-align: center;
 }
