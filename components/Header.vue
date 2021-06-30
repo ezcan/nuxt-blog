@@ -8,7 +8,10 @@
             <nuxt-link to="/chinese">漢字查詢器</nuxt-link>
           </li>
           <li class="nav__item">
-            <nuxt-link to="/about">關於</nuxt-link>
+            <nuxt-link to="/players">球員點將錄</nuxt-link>
+          </li>
+          <li class="nav__item">
+            <nuxt-link to="/about">關於筆記</nuxt-link>
           </li>
         </ul>
       </div>
