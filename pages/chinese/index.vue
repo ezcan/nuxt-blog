@@ -1,32 +1,40 @@
 <template>
   <section class="section bd-container">
-    <SearchInput v-model.lazy="searchQuery" class="mb-2" />
-    <transition-group tag="ul" name="fade">
-      <li
-        v-for="result of searchResult"
-        :key="result.target"
-        class="result__container grid"
-      >
-        <h3 class="target-char">{{ result.target }}</h3>
-        <div class="result__box">
-          <ul>
-            <li v-for="pos of result.position" :key="pos.prefix">
-              {{ pos.prefix }}
-              <i class="bx bx-columns"></i>
-              <span class="color-primany"> {{ pos.page | page }} </span>
-              <span class="color-primany"> {{ pos.row | row }} </span>
-              <span class="color-primany"> {{ pos.col | col }} </span>
-            </li>
-            <li v-if="result.position.length === 0">
-              Opps!遊戲中可能有沒收錄這個字
-            </li>
-          </ul>
-        </div>
-      </li>
-    </transition-group>
-    <p class="tool__info">
-      這個工具可以幫助您在「實況野球2021」遊戲中，快速查找您輸入的漢字所在位置。若查詢結果顯示「查無資料」，即表示遊戲中可能並未收錄該文字；如確有勘誤的部分，也歡迎回報！
-    </p>
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+      <div>
+        <SearchInput v-model="searchQuery" class="mb-2" />
+
+        <transition-group tag="ul" name="fade">
+          <li
+            v-for="result of searchResult"
+            :key="result.target"
+            class="result__container grid"
+          >
+            <h3 class="target-char">{{ result.target }}</h3>
+            <div class="result__box">
+              <ul>
+                <li v-for="pos of result.position" :key="pos.prefix">
+                  {{ pos.prefix }}
+                  <i class="bx bx-columns"></i>
+                  <span class="color-primany"> {{ pos.page | page }} </span>
+                  <span class="color-primany"> {{ pos.row | row }} </span>
+                  <span class="color-primany"> {{ pos.col | col }} </span>
+                </li>
+                <li v-if="result.position.length === 0">
+                  Opps!遊戲中可能有沒收錄這個字
+                </li>
+              </ul>
+            </div>
+          </li>
+        </transition-group>
+        <p class="tool__info">
+          這個工具可以幫助您在「實況野球2021」遊戲中，快速查找您輸入的漢字所在位置。若查詢結果顯示「查無資料」，即表示遊戲中可能並未收錄該文字；如確有勘誤的部分，也歡迎回報！
+        </p>
+      </div>
+      <div>
+        <img src="@/assets/images/chinese.jpg" class="my-4 rounded-lg" alt="" />
+      </div>
+    </div>
   </section>
 </template>
 <script>
