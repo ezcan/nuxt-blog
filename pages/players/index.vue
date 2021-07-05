@@ -1,7 +1,5 @@
 <template>
   <section class="section bd-container">
-    <input v-model="value" type="number" style="color: black" />
-    <rank-changer :value="value"></rank-changer>
     <h2 class="section-title">球員點將錄</h2>
     <ul
       class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center"
@@ -25,10 +23,8 @@
 </template>
 
 <script>
-import RankChanger from '../../components/RankChanger.vue'
 export default {
   name: 'Players',
-  components: { RankChanger },
   async asyncData({ $content, params }) {
     const articles = await $content('players')
       .only(['title', 'img', 'slug', 'number'])
