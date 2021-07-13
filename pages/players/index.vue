@@ -12,7 +12,7 @@
         <NuxtLink
           :to="{ name: 'players-slug', params: { slug: article.slug } }"
         >
-          <img :src="article.img" :alt="article.title" />
+          <img :src="article.img" :alt="article.title" loading="lazy" />
           <h3 class="player-title font-semibold">
             {{ article.title }} #{{ article.number }}
           </h3>
@@ -28,7 +28,8 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('players')
       .only(['title', 'img', 'slug', 'number'])
-      .sortBy('updatedAt', 'asc')
+      .sortBy('updatedAt', 'desc')
+      .limit(12)
       .fetch()
 
     return { articles }
